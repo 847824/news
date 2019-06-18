@@ -1,0 +1,189 @@
+/*表头*/
+.header{
+    width:7.50rem;
+    padding-top: 0.26rem;
+    padding-bottom: 0.26rem;
+    background:rgba(255,255,255,1);
+    text-align: center;
+    vertical-align: center;
+    color: #333333;
+    font-size: 0.36rem;
+    border-bottom: 0.01rem solid #D0D0D0 !important;
+}
+/*轮播图*/
+.index_swiper{
+    width:7.50rem;
+    height:3.60rem;
+    background:rgba(231,231,231,1);
+    border-bottom:0.08rem solid #E7E7E7;
+}
+.swiper_h {
+    width: 100%;
+    height: 3.52rem;
+}
+.image_swiper{
+	width: 100%;
+	height: 3.52rem;
+}
+/*广告栏缩略图*/
+.ad_list{
+    width: 7.5rem;
+    /*height: 1.6rem;*/
+
+}
+.ad_swiper1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.03rem;
+}
+
+.ad_swiper{
+    width: 100%;
+}
+.ad_item_img{
+    padding: 0.09rem;
+    text-align: center;
+    /*margin: auto auto;*/
+    line-height: 0.2rem;
+}
+.ad_item_txt{
+    padding: 0.09rem;
+    font-family: SourceHanSansCN-Regular;
+    font-size: 0.28rem;
+    font-weight:400;
+    color:rgba(119,119,119,1);
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.swiper-slide1{
+    width: 1.56rem !important;
+}
+.swiper-slide11{
+    text-decoration: none;
+
+}
+
+/*热门推荐*/
+.recommend{
+    width: 100%;
+    margin-top: 0.71rem;
+    display: flex;
+    justify-content: space-between;
+}
+.recommend_left{
+    font-size:0.3rem;
+    font-family:SourceHanSansCN-Regular;
+    font-weight:400;
+    color:rgba(51,51,51,1);
+ }
+.recommend_left span{
+    padding-left: 0.04rem;
+    padding-right: 0.04rem;
+    background:rgba(4,199,185,1);
+    border-radius:0.04rem;
+    margin-right: 0.1rem;
+    margin-left: 0.29rem;
+}
+.recommend_right a{
+    color: #808080;
+    text-decoration: none;
+}
+/*主要内容*/
+.index_content{
+    width: 7.11rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    padding: 0.13rem;
+    /*border-bottom:0.01rem solid #D0D0D0 ;*/
+}
+.content_image{
+    width: 2.3rem;
+    height: 1.51rem;
+}
+.content_image img{
+    display: block;
+    width:2.3rem ;
+    height: 1.51rem;
+}
+.content_text{
+    flex: 1;
+    margin-left: 0.17rem;
+}
+.content_text_tittle{
+    width:4.39rem;
+    /*height:0.28rem;*/
+    font-size:0.28rem;
+    font-family:MicrosoftYaHei;
+    font-weight:400;
+    color:rgba(7,7,7,1);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-bottom: 0.20rem;
+}
+.index_content_a{
+ color:rgba(7,7,7,1);
+ text-decoration: none;
+}
+
+/*多行显示 溢出隐藏*/
+.content_text_txt{
+    width:4.39rem;
+    font-size:0.22rem;
+    font-family:MicrosoftYaHei;
+    font-weight:400;
+    color:rgba(119,115,115,1);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+
+}
+
+/*分割线*/
+.cutting{
+    width:7.01rem;
+    height:0.01rem;
+    background:rgba(208,208,208,1);
+    margin: 0.26rem 0 auto;
+
+}
+
+/*底部tab导航*/
+.index_table{
+    width:100%;
+    height:0.98rem;
+    background:rgba(255,255,255,1);
+    border-top: 0.01rem solid #D2D2D2;
+    display: flex;
+    justify-content: space-around;
+    padding: 0.08rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+.tab_left,.tab_right{
+    height: 0.8rem;
+    width: 1.2rem;
+    font-size:0.24rem;
+    font-family:SourceHanSansCN-Regular;
+    font-weight:400;
+    color:rgba(51,51,51,1);
+    text-align: center;
+    vertical-align: center;
+}
+.index_table a{
+color: rgba(51,51,51,1);
+text-decoration: none;
+}
+.tab_action{
+    color: #04C7B9;
+}
+/*底部加垫*/
+.app{
+    padding-bottom:0.98rem ;
+}

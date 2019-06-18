@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+<body>
+	<div id="xgg" style="position: absolute;left: 0px;top: 0;">
+     <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1536557209&di=966a9af252c7e33892be1cee37b52885&imgtype=jpg&er=1&src=http%3A%2F%2Fqt.a963.com%2Fuploadfile%2F2016%2F0929%2F20160929043850378.jpg" alt="">
+ </div>
+ <script>
+     var xleft=0;
+     var ytop=0;
+     var movex=1;
+     var movey=1;
+     function  move(){
+         xleft+=movex;
+         ytop+=movey;
+         var xgg=document.getElementById("xgg");
+         xgg.style.top=ytop+"px";
+         xgg.style.left=xleft+"px";
+         if(xleft+xgg.offsetWidth>=document.body.clientWidth+xgg.offsetWidth|| xleft<=-document.body.clientWidth){
+             xleft=-xgg.offsetWidth
+			 movex=-movex;
+         }
+//注意 document.body.clientHeight 兼容问题
+             if(ytop+xgg.offsetHeight>=document.body.clientHeight+xgg.offsetHeight||ytop<=-document.body.clientHeight){
+             ytop=0
+			 movey=-movey;
+         }
+     }
+     setInterval(move,10);
+ </script>
+ 

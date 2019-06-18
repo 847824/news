@@ -1,0 +1,83 @@
+.app{
+	
+}
+.head{
+	height: 0.57rem;
+	color: #04C7B9;
+	font-family:SourceHanSansCN-Bold ;
+	font-size: 0.59rem;
+	text-align: center;
+	line-height: 0.57rem;
+	margin-top: 2.74rem;
+}
+.login_option{
+	width: 5.52rem;
+	height: 0.77rem;
+	border-bottom: 0.01rem solid #4A5994;
+	text-align: center;
+	line-height: 0.38rem;
+	display: flex;
+	justify-content: space-between;
+	padding-left: 0.29rem;
+	padding-right: 0.29rem;
+	margin-top: 1.3rem;
+}
+.option_item{
+	width: 1.19rem;
+	font-family: SourceHanSansCN-Regular;
+	font-size: 0.32rem;
+	color: #949494;
+	padding: 0.14rem;
+}
+.option_item_action{
+	border-bottom: 0.04rem solid #04C7B9;
+	color:#04C7B9;
+}
+.input_list{
+	height: 3.51rem;
+	width: 5.57rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin-top: 0.64rem;
+}
+.password_input,.phone_input{
+	display: block;
+	width: 5.57rem;
+	height: 0.88rem;
+	background:#F8F8F8 ;
+	font-size: 0.28rem;
+	color:#B2B2B2 ;
+	outline: none;
+	border-radius:0.1rem ;
+	padding-left: 0.3rem;
+}
+.loginng{
+	display: block;
+	width: 5.57rem;
+	height: 0.88rem;
+	line-height: 0.44rem;
+	color: #F8F8F8;
+	background-color:#04C7B9 ;
+	font-family: SourceHanSansCN-Regular;
+	font-size: 0.38rem;
+	text-align: center;
+	outline: none;
+	border-radius:0.1rem ;
+}
+.forget{
+	width: 5.57rem;
+	text-align: right;
+	padding-top: 0.15rem;
+}
+.forget a{
+	text-decoration: none;
+	color: #979797;
+	font-size: 0.24rem;
+}
+.login1{
+	display: block;
+}
+.register1{
+	display: none;
+}

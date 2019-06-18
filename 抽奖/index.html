@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+   <link rel="stylesheet" type="text/css" href="css/index.css"/>
+   <!-- <link rel="stylesheet" type="text/css" href="css/mui.css"/> -->
+   <link rel="stylesheet" type="text/css" href="css/mui.min.css"/>
+   <script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+ 
+   <script src="js/jQueryRotate.min.js" type="text/javascript" charset="utf-8"></script>
+   <script src="js/loading.js" type="text/javascript" charset="utf-8"></script>
+   <script src="js/modernizr.js" type="text/javascript" charset="utf-8"></script>
+   <script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+   <script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+   <script src="js/zepto_1.1.3.js" type="text/javascript" charset="utf-8"></script>
+     <script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<script type="text/javascript">
+    //		document.documentElement.style.fontSize = document.documentElement.clientWidth / 375*100 + 'px';
+    (function(){
+        var html=document.querySelector('html')
+        html.style.fontSize=window.innerWidth/375*100+'px'
+        window.onresize=function(e){
+            html.style.fontSize=window.innerWidth/375*100+'px'
+        }
+    })()
+
+</script>
+
+<script src="__STATIC__/luck/js/loading.js"></script>
+<style type="text/css">
+    .hdgz_page .content .txt_bg{
+        width: 90%;
+    }
+    .hdgz_page .content .txt_bg p{
+        color: #fff;
+        text-align: justify;
+        padding-left:25px;
+        text-indent:-25px;
+    }
+    .hdgz_page .content {
+        width: 3.75rem;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .hdgz_page .content .txthead div {
+        margin: 0 auto;
+        height: 0.4rem;
+        width: 1rem;
+        font-family: SimHei;
+        font-size: 0.17rem;
+        font-weight: normal;
+        font-stretch: normal;
+        /* line-height: 37px; */
+        letter-spacing: 0px;
+        /*color: #d7215d;*/
+        color: #fff;
+    }
+    .hdgz_page .content .txthead {
+        width: 3rem;
+        height: 0.8rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        line-height: 0.4rem;
+    }
+    .hdgz_page .meu{
+        width: 100%;
+        height: 0.8rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        position: relative;
+    }
+    .hdgz_page .meu span {
+        width: 0.32rem;
+        height: 0.25rem;
+        font-size: 0.3rem;
+        position: absolute;
+        left: -0.02rem;
+    }
+    .hdgz_page{
+        width:100%;
+        height:100%;
+        background-image: url(__STATIC__/luck/image/jl_background.jpg);
+        background-repeat: no-repeat;
+        background-position: 0px 0px;
+        background-size: 100% 100%;
+        position:absolute;
+        left:0px;
+        top:0px;
+        /*display:none !important;*/
+        z-index:0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .hdgz_header{
+        width: 100%;
+        height: 0.8rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        position: relative;
+    }
+    #loading{
+        height: 1rem;
+        width: 100%;
+        background: #fff url(__STATIC__/luck/image/loading1.gif);
+        background-repeat: no-repeat;
+        /*background-position: 0px 0px;
+        background-size: 100% 100%;*/
+        padding-left: 0.2rem;
+        margin-left: 1rem;
+        margin-top: 2rem;
+    }
+    .shouye{
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: 0;
+        background-image: url(__STATIC__/luck/image/background1.png);
+        background-repeat: no-repeat;
+        background-position: 0px 0px;
+        background-size: 100% 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+    }
+    .zj_text  .zj_background{
+        width: 100%;
+        height: 100%;
+        /*position: fixed;*/
+        z-index: -20;
+        background-image: url(__STATIC__/luck/image/zhongj_background.png);
+        background-repeat: no-repeat;
+        background-position: 0px 0px;
+        background-size: 100% 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .zj_jilu{
+        width:100%;
+        height:100%;
+        background-image: url(__STATIC__/luck/image/jl_background.jpg);
+        background-repeat: no-repeat;
+        background-position: 0px 0px;
+        background-size: 100% 100%;
+        position:absolute;
+        left:0px;
+        top:0px;
+        /*display:none !important;*/
+        z-index:0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .zj_jilu .content .txt_bg .hz_bg{
+        width: 3.4rem;
+        height: 4.06rem;
+        background-image: url(__STATIC__/luck/image/jl_bg.png);
+        background-repeat: no-repeat;
+        background-position: 0px 0px;
+        background-size: 100% 100%;
+        position: absolute;
+        left: 0.15rem;
+        top: 0rem;
+        z-index: 0;
+
+    }
+    .zj_jilu .content .txt_bg .hz{
+        width: 1.8rem;
+        height: 1.5rem;
+        background-image: url(__STATIC__/luck/image/hz.png);
+        background-repeat: no-repeat;
+        background-position: 0px 0px;
+        background-size: 100% 100%;
+        position: absolute;
+        left: 0.15rem;
+        bottom: 0.15rem;
+        z-index: 0;
+
+    }
+</style>
+<body>
+<div id="app" class="mui-content">
+
+    <!--首页-->
+    <div v-show='shouye' class="shouye" id="Background">
+        <!--头部-->
+        <!--<div class="head">
+            <span class="mui-icon mui-icon-left-nav"></span>
+            <h5>幸运大转盘</h5>
+        </div>-->
+        <!--图层-->
+        <div class="kongbai" style="height: 0rem;width: 0rem;margin:0.4rem ;"></div>
+        <!--<audio style="display:none; height: 0;" id="bg-music" preload="auto" src="__STATIC__/luck/image/test.mp3" loop="loop"></audio>-->
+        <div class="yun">
+            <div class="back_tu">
+                <div class="logo">
+                    <img src="__STATIC__/luck/image/yunshanfu.png"/>
+                </div>
+                <div class="center_tu">
+                    <img src="__STATIC__/luck/image/yun.png"/>
+                </div>
+                <div class="jilu" style="width: 1.1rem;height: 0.2rem;margin-left: 0.001rem;background-color: #f70a28 !important;">
+                    <p class="jl" @click="zhongjiang_jlu" style="font-size: 0.2rem; width: 1.1rem;height: 0.2rem;padding: 0.0001rem;background-color: #f70a28 !important;padding: 0.01rem;">中奖记录 ></p>
+                    <!--<p class="hdgz_p">活动规则 ></p>-->
+                </div>
+
+                <div id="" style="width: 0;height: 0;"></div>
+            </div>
+            <div class="choujiangjilu">
+                <p>剩余抽奖次数:<i id="cj_cishu">{{index}}</i>次</p>
+            </div>
+        </div>
+        <!--转盘转动层-->
+        <div class="zhuanpan">
+            <div class="big_yuan">
+                <img class="one" src="__STATIC__/luck/image/big_yuan1.png" alt="" />
+                <div @click='dj_choujiang'  id="bt" class="little_yuan" data-id="0">
+                    <img  class="two" src="__STATIC__/luck/image/little_yuan.png"/>
+                    <img class="dd" src="__STATIC__/luck/image/dd.png"/>
+                    <div  id="twoyuan" class="star">
+                        <h4>开始</h4>
+                        <h4>抽奖</h4>
+                    </div>
+                </div>
+                <!--转盘上的文字-->
+                <!--<p class="d1">现金大礼包</p>
+                <p class="d2">3.8G币</p>
+                <p class="d3">8.8G币</p>
+                <p class="d4">平板电脑</p>
+                <p class="d5">iPhoneXS</p>
+                <p class="d6">1.8G币</p>-->
+            </div>
+        </div>
+        <div class="bottom">
+            <img src="__STATIC__/luck/image/bottom.png"/>
+        </div>
+    </div>
+
+    <!--点击手机验证弹窗-->
+    <div  class="zhezhao" id="zhezhao">
+        <div class="login" id="login">
+            <div class="phon_num mui-input-row">
+                <!--maxlength="13" onkeydown="if(value.length==3||value.length==8){value+=' '}"onfocus="this.placeholder=''" onblur="if(value==''){this.placeholder='请输入手机号码'}"-->
+                <!--<label style="width:0rem;height: 0rem;" for=""></label>-->
+                <input type="text" class='mui-input-clear' name="" id="ph_num" maxlength="11" value="" placeholder="请输入手机号码" />
+            </div>
+            <div class="yanz_num">
+                <div class="mui-input-row">
+                    <!--<label style="width:0rem;height: 0rem;" for=""></label>-->
+                    <!--onfocus="this.placeholder=''" onblur="if(value==''){this.placeholder='请输入验证码'}"-->
+                    <input class='mui-input-clear' type="text" name="" id="ym" value=""  placeholder="请输入验证码"  />
+                </div>
+
+                <div class="yz">
+                    <input id="yz" class="daojishi" @click='dj_huoque' type="button" name="" id="" value="点击获取" />
+                </div>
+            </div>
+            <div class="yz_btn">
+                <button id="lg" @click='lj_yanzheng' class="login1">立即验证</button>
+            </div>
+            <span id="btclose" class=" mui-icon mui-icon-close xx"></span>
+        </div>
+    </div>
+
+    <!--中奖弹框-->
+    <div v-show='isShow' class="zj_tankuang">
+        <div class="zj_text">
+            <div class="zj_background">
+                <div class="txt">
+                    获得<span  class="jiangci" >{{zj_leibie}}</span>
+                </div>
+                <div class="btn" @click='lianqu'>确定</div>
+            </div>
+            <!--<span class=" mui-icon mui-icon-close xxx"></span>-->
+        </div>
+    </div>
+
+    <!--中将记录-->
+    <div v-show='zj_bg' class="zj_jilu">
+        <!--<div class="head">
+            <span id="back2" class="mui-icon mui-icon-left-nav"></span>
+          <h5>中将记录</h5>
+        </div>-->
+        <div class="meu mui-row">
+            <span id="back2" class="mui-col-xs-1 mui-icon mui-icon-left-nav"></span>
+            <button class="mui-col-xs-5.5"  id="zj_my">我的奖品</button>
+            <!-- <button class="mui-col-xs-5.5"   id="zj_md">中奖名单</button> -->
+        </div>
+        <div class="content">
+            <div class="txthead">
+                <div>中奖号码</div>
+                <div>奖品</div>
+                <div>中奖时间</div>
+            </div>
+            <div class="txt_bg">
+                <!--小框框-->
+                <div class="hz_bg">
+                    <div id="zjlv_txt" class="txt">
+                        <div class="txtcontent">
+                            <!--<div class="phnum">15433254853</div>
+                            <div class="leibie">100元现金红包</div>
+                            <div class="time">2019.03.16</div>-->
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+
+                <!--小盒子div-->
+                <div class="hz">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--活动规则--dxp-->
+    <div class="hdgz_page" style="display: none;">
+        <div class="meu mui-row">
+            <span id="back3" class="mui-col-xs-1 mui-icon mui-icon-left-nav" style="display: block;float: left;"></span>
+        </div>
+        <div class="content">
+            <div class="txthead">
+                <div>活动规则</div>
+            </div>
+            <div class="txt_bg">
+                <p>1. 时间：<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3月29日群里通告商户交易笔数，3月30日和3月31日两天，早上9:00到下午18:00进行抽奖活动，抽奖机会限活动时间使用，奖品数量有限，先到的先得；</p>
+                <p>2. 对象：<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;普定县开通办理云闪付的商户；</p>
+                <p>3. 行业：<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;百货店、母婴店、服饰店、正餐类、大型超市、加油站、水果店、药店、轻餐饮（早餐粉面馆、街道小吃店、糕点面包店等）、停（洗）车、休闲娱乐、家具、五金等</p>
+                <p>4. 交易规则：<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A. 云闪付交易笔数达到15笔（含15笔）以上的商户，且参与号码需正常状态，如欠费、停机、报停、挂失、预拆、预销等异常状态将不能参与；<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B. 参加本次活动电话号码以商户提交录入号码为准，未实名的号码商户不能参与本次活动。
+                </p>
+                <p>说明：<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本活动最终解释权归普定县云闪付运营机构所有，请各位商户熟知活动规则！</p>
+            </div>
+        </div>
+    </div>
+
+    <!--提示弹框-->
+    <div v-show='tk_tishi' id="tk" class="tk_tishi">
+        <div class="ts_content">
+            
+        </div>
+    </div>
+
+</div>
+<!--<script type="text/javascript"src="http://yl.uplsd.com/api/get_result/all?callback=jsonpCallback"></script>-->
+<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/index.js?id=201903301" type="text/javascript" charset="utf-8"></script>
+<script src="js/jQueryRotate.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+//  //音乐自动播放
+//  $(document).ready(function(){
+//      autoPlayMusic();
+//      audioAutoPlay();
+//  });
+//  function audioAutoPlay() {
+//      var audio = document.getElementById('bg-music');
+//      audio.play();
+//      document.addEventListener("WeixinJSBridgeReady", function () {
+//          audio.play();
+//      }, false);
+//  }
+//  // 音乐播放
+//  function autoPlayMusic() {
+//      // 自动播放音乐效果，解决浏览器或者APP自动播放问题
+//      function musicInBrowserHandler() {
+//          musicPlay(true);
+//          document.body.removeEventListener('touchstart', musicInBrowserHandler);
+//      }
+//      document.body.addEventListener('touchstart', musicInBrowserHandler);
+//      // 自动播放音乐效果，解决微信自动播放问题
+//      function musicInWeixinHandler() {
+//          musicPlay(true);
+//          document.addEventListener("WeixinJSBridgeReady", function () {
+//              musicPlay(true);
+//          }, false);
+//          document.removeEventListener('DOMContentLoaded', musicInWeixinHandler);
+//      }
+//      document.addEventListener('DOMContentLoaded', musicInWeixinHandler);
+//  }
+//  function musicPlay(isPlay) {
+//      var media = document.querySelector('#bg-music');
+//      if (isPlay && media.paused) {
+//          media.play();
+//      }
+//      if (!isPlay && !media.paused) {
+//          media.pause();
+//      }
+//  }
+    
+    $(function () {
+        $(".hdgz_p").on("click",function () {
+
+            $(".hdgz_page").show();
+        });
+
+        $("#back3").on("click",function () {
+
+            $(".hdgz_page").hide();
+        });
+
+    });
+    
+</script>
+</body>
+</html>

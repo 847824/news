@@ -1,0 +1,45 @@
+/*表头*/
+.header{
+    width:7.50rem;
+    padding-top: 0.26rem;
+    padding-bottom: 0.26rem;
+    background:rgba(255,255,255,1);
+    text-align: center;
+    vertical-align: center;
+    color: #333333;
+    font-size: 0.36rem;
+    border-bottom: 0.01rem solid #D0D0D0 !important;
+}
+.deatil_tittle{
+	padding-left: 0.26rem;
+	padding-right: ;
+	padding:0.32rem 0.32rem  0.41rem 0.26rem;
+	font-size:0.34rem;
+	font-family:SourceHanSansCN-Medium;
+	font-weight:500;
+	color:rgba(51,51,51,1);
+}
+.deatil_release_time{
+	padding:0 0.12rem  0 0.29rem;
+	font-size:0.22rem;
+	font-family:MicrosoftYaHei;
+	font-weight:400;
+	color:rgba(153,153,153,1);
+}
+.deatil_content{
+	padding: 0.36rem 0.28rem;
+	font-size:0.24rem;
+	font-family:MicrosoftYaHeiLight;
+	font-weight:300;
+	color:rgba(51,51,51,1);
+	/* line-height:36px; */
+}
+.deatil_image{
+	width: 100%;
+	text-align: center;
+	padding: 0.09rem;
+}
+.deatil_image img{
+	width:531px;
+	height:358px;
+}
